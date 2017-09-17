@@ -1,0 +1,196 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Campagne par abonnement",
+		"_postman_id": "b22cf03c-dc4a-0018-9d12-63142292de9e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"request": {
+				"url": "https://unicavmdemo:9444/unica/api/manager/authentication/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "m_user_name",
+						"value": "asm_admin",
+						"description": ""
+					},
+					{
+						"key": "m_user_password",
+						"value": "demo",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET Local Campaign",
+			"request": {
+				"url": "https://unicavmdemo:9444/collaborate/api/collaborate/v1/forms/237/attributesb",
+				"method": "GET",
+				"header": [
+					{
+						"key": "m_user_name",
+						"value": "asm_admin",
+						"description": ""
+					},
+					{
+						"key": "m_tokenid",
+						"value": "EXPONEDEMO.example.com43-1484056274986-2-p455581t",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "api_auth_mode",
+						"value": "manager",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Lists all On-demand Campaigns."
+			},
+			"response": []
+		},
+		{
+			"name": "GET TemplateFolder",
+			"request": {
+				"url": "https://unicavmdemo:9444/collaborate/api/collaborate/v1/templatefolders/110/templates",
+				"method": "GET",
+				"header": [
+					{
+						"key": "m_user_name",
+						"value": "asm_admin",
+						"description": ""
+					},
+					{
+						"key": "m_tokenid",
+						"value": "EXPONEDEMO.example.com222-1479467854557-2-e367910o",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "api_auth_mode",
+						"value": "manager",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Lists all template folders."
+			},
+			"response": []
+		},
+		{
+			"name": "GET Forms of Local Campaign",
+			"request": {
+				"url": "https://unicavmdemo:9444/collaborate/api/collaborate/v1/locals/1000115/projectforms",
+				"method": "GET",
+				"header": [
+					{
+						"key": "m_user_name",
+						"value": "asm_admin",
+						"description": ""
+					},
+					{
+						"key": "m_tokenid",
+						"value": "EXPONEDEMO.example.com222-1479467854557-2-e367910o",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "api_auth_mode",
+						"value": "manager",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Retrieve Forms of a local campaign"
+			},
+			"response": []
+		},
+		{
+			"name": "GET Form atttributes",
+			"request": {
+				"url": "https://unicavmdemo:9444/collaborate/api/collaborate/v1/locals/1000115/projectforms/334",
+				"method": "GET",
+				"header": [
+					{
+						"key": "m_user_name",
+						"value": "asm_admin",
+						"description": ""
+					},
+					{
+						"key": "m_tokenid",
+						"value": "EXPONEDEMO.example.com222-1479467854557-2-e367910o",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "api_auth_mode",
+						"value": "manager",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "Retrieve Form attributes  of a local campaign"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Form atttributes ",
+			"request": {
+				"url": "https://unicavmdemo:9444/collaborate/api/collaborate/v1/locals/1000115/projectforms/334",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "m_user_name",
+						"value": "asm_admin",
+						"description": ""
+					},
+					{
+						"key": "m_tokenid",
+						"value": "EXPONEDEMO.example.com222-1479467854557-2-e367910o",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "api_auth_mode",
+						"value": "manager",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \"User_Variables\": [\n {\n      \n      \"Attribute_Name\": \"inid_pdv\",\n      \"Attribute_Values\": [\n        \"(1,3)\"\n      ]\n}\n],\n  \"Offers\": []\n}"
+				},
+				"description": "Update Form attributes with new PDV ID"
+			},
+			"response": []
+		}
+	]
+}
